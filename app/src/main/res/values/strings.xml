@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Webview e Teste Unitário</string>
+    <string name="title_native">Nativo</string>
+    <string name="label_button_native">Enviar para Webview</string>
+</resources>

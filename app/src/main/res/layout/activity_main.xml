@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/titleTextNative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_default"
+            android:layout_marginTop="@dimen/margin_default"
+            android:layout_marginRight="@dimen/margin_default"
+            android:gravity="center"
+            android:text="@string/title_native"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editTextNative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="@id/titleTextNative"
+            app:layout_constraintStart_toStartOf="@id/titleTextNative"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextNative" />
+
+        <Button
+            android:id="@+id/buttonNative"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_default"
+            android:background="@color/colorAccent"
+            android:text="@string/label_button_native"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/editTextNative"
+            app:layout_constraintStart_toStartOf="@id/editTextNative"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNative" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintEnd_toEndOf="@id/buttonNative"
+            app:layout_constraintStart_toStartOf="@id/buttonNative"
+            app:layout_constraintTop_toBottomOf="@+id/buttonNative">
+
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/margin_default"
+                android:scrollbars="none" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
